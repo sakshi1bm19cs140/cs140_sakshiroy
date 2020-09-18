@@ -50,3 +50,83 @@ int main()
     }
     return 0:
 }
+
+/*Second Program*/
+
+#include<stdio.h>
+int sumaver(int x,int y)
+{
+    int sum=x+y;
+    int avg=sum/2;
+    printf("Sum is %d\n",sum);
+    return avg;
+}
+int printeven(int x , int y)
+{
+    if(x%2==0)
+    {
+        printf("\n%d is even",x);
+
+    }
+    if(y%2==0)
+    {
+            printf("\n%d is even",y);
+    }
+}
+int main()
+{
+    int x,y,z,avg;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&x,&y,&z);
+    if(x>y && x>z)
+    {
+        if(y>z)
+        {
+            avg=sumaver(x,y);
+
+            printf("%d is the avg\n",avg);
+            printeven(x,y);
+        }
+        else
+        {
+            avg=sumaver(x,z);
+
+            printf("%d is the avg\n",avg);
+            printeven(x,z);
+        }
+    }
+    else if(y>z && y>x)
+    {
+        if(z>x)
+        {
+            avg=sumaver(y,z);
+            printf("%d is the avg",avg);
+            printeven(y,z);
+
+        }
+        else
+        {
+            avg=sumaver(x,y);
+            printf("%d is the avg\n",avg);
+            printeven(x,y);
+        }
+
+    }
+    else
+    {
+        if(x>y)
+        {
+            avg=sumaver(x,z);
+            printf("%d is the avg\n",avg);
+            printeven(x,z);
+        }
+        else
+        {
+            avg=sumaver(y,z);
+            printf("%d is the avg\n",avg);
+            printeven(y,z);
+
+        }
+    }
+    return 0;
+}  
